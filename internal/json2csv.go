@@ -34,9 +34,11 @@ func ConvertJSONToCSV(jsonFile, csvFile string) error {
 	if err != nil {
 		return err
 	}
+	defer outputFile.Close()
 
 	// Write the header of the CSV file and the successive rows by iterating through the JSON struct array
 	writer := csv.NewWriter(outputFile)
+	defer writer.Flush()
 
 	header := []string{"comment_ID", "comment_post_ID", "product_SKU", "comment_author", "comment_author_email", "comment_date", "comment_date_gmt", "comment_content", "comment_approved", "comment_parent", "user_id", "rating", "verified"}
 	if err := writer.Write(header); err != nil {
@@ -65,7 +67,5 @@ func ConvertJSONToCSV(jsonFile, csvFile string) error {
 		record = append(record, "1")
 		writer.Write(record)
 	}
-	writer.Flush()
-	outputFile.Close()
 	return nil
 }

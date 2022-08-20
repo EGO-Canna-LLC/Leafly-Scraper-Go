@@ -11,3 +11,8 @@ func readFromFile(fileName string) (string, error) {
 	}
 	return string(htmlData), nil
 }
+
+func CleanUp(fileName string) error {
+	err := os.Remove(fileName)
+	return err
+}
