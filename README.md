@@ -1,2 +1,2 @@
-# Leafly-Scraper-Go
-Leafly Review Scraper
+# Leafly-Scrapper-Go
+Leafly Review Scrapper
