@@ -12,11 +12,15 @@ func main() {
 	}
 	// extract <script type="application/ld+json"> from example.html
 	// and save to example.json
-	err = internal.ExtractJSON("reviews.html", "reviews.json")
+	err = internal.ExtractJSON("./reviews.html", "reviews.json")
 	if err != nil {
 		return
 	}
 	err = internal.ConvertJSONToCSV("./reviews.json", "./reviews.csv")
+	if err != nil {
+		return
+	}
+	err = internal.CleanUp("./reviews.html")
 	if err != nil {
 		return
 	}
