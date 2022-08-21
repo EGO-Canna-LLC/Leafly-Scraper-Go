@@ -123,17 +123,15 @@ func ExtractJSON(filename, jsonFilename string) (err error) {
 
 func formatJSON(filename string) (err error) {
 	fmt.Println("Formatting JSON")
-	incJsonFile, _ := os.OpenFile(filename, os.O_RDWR, 0644)
-	defer incJsonFile.Close()
-	jsonData, _ := io.ReadAll(incJsonFile)
+	incFile, _ := os.ReadFile(filename)
 	var prettyJSON bytes.Buffer
 	// prettify the json before writing it to the file
-	error := json.Indent(&prettyJSON, jsonData, "", "\t")
+	error := json.Indent(&prettyJSON, incFile, "", "\t")
 	if error != nil {
 		log.Println("JSON parse error: ", error)
 		return
 	}
-	jsonFile, _ := os.Create("reviews.json")
+	jsonFile, _ := os.Create(filename + ".formatted")
 	defer jsonFile.Close()
 	jsonFile.Write(prettyJSON.Bytes())
 	return nil
