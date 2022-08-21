@@ -1,3 +1,6 @@
+[![Coverage Status](https://img.shields.io/badge/coverage-88%25-brightgreen.svg)](#)
+[![Go](https://github.com/EGO-Canna-LLC/Leafly-Scraper-Go/actions/workflows/go.yml/badge.svg)](https://github.com/EGO-Canna-LLC/Leafly-Scraper-Go/actions/workflows/go.yml)
+
 # Leafly-Scrapper-Go
 Leafly Review Scrapper
 
@@ -15,6 +18,3 @@ go build .
 
 ## Testing
 go test ./... -v -cover
-
-### Coverage
-[![Coverage Status](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://coveralls.io/r/github/james-d-james/leafly-scrapper-go)
