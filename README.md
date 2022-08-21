@@ -1,4 +1,4 @@
-[![Coverage Status](https://img.shields.io/badge/coverage-88%25-brightgreen.svg)](#)
+[![Coverage Status](https://img.shields.io/badge/coverage-88.2%25-brightgreen.svg)](#)
 [![Go](https://github.com/EGO-Canna-LLC/Leafly-Scraper-Go/actions/workflows/go.yml/badge.svg)](https://github.com/EGO-Canna-LLC/Leafly-Scraper-Go/actions/workflows/go.yml)
 
 # Leafly-Scrapper-Go
