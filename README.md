@@ -11,6 +11,7 @@ go 1.19+
 
 ## Running
 go run .
+
 or run the binary after compiling
 
 ## Compiling
